@@ -25,7 +25,7 @@ public class WikimediaChangesProducer {
         properties.setProperty("key.serializer", StringSerializer.class.getName());
         properties.setProperty("value.serializer",StringSerializer.class.getName());
 
-        // set high throughput producer configs
+        // set high throughput producer configs test
         properties.setProperty(ProducerConfig.LINGER_MS_CONFIG, "20");
         properties.setProperty(ProducerConfig.BATCH_SIZE_CONFIG, Integer.toString(32 * 1024));
         properties.setProperty(ProducerConfig.COMPRESSION_TYPE_CONFIG, "snappy");
