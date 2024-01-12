@@ -29,8 +29,10 @@ public class WikimediaChangeHandler implements EventHandler {
     @Override
     public void onMessage(String s, MessageEvent messageEvent) throws Exception {
         log.info(messageEvent.getData());
-        //async
+        // asynchronous
         kafkaProducer.send(new ProducerRecord<>(topic, messageEvent.getData()));
+
+        // note that if the buffer is full this method is going to block our program for kafka to have time to catch up
     }
 
     @Override
