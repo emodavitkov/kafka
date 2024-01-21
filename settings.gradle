@@ -3,4 +3,6 @@ include 'kafka-basics'
 include 'kafka-producer-wikimedia'
 include 'kafka-consumer-opensearch:kafka-consumer-opensearch'
 findProject(':kafka-consumer-opensearch:kafka-consumer-opensearch')?.name = 'kafka-consumer-opensearch'
+include 'kafka-streams-wikimedia'
+include 'kafka-streams-wikimedia'
 
